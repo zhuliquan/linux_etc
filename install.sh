@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # 安装git, curl, wget, openssl vim neovim ack
+sudo apt-get update
 sudo apt-get install -y git curl wget openssl vim neovim ack
 
 # 安装fzf
