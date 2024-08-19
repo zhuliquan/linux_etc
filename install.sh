@@ -46,3 +46,6 @@ ln -s ~/.vimrc ~/.config/nvim/init.vim
 # 启动docker
 sudo systemctl enable docker
 sudo systemctl start docker
+
+# 启用bashrc相关配置
+source ~/.bashrc
