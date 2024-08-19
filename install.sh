@@ -25,7 +25,7 @@ echo \
 sudo apt-get update
 
 # 安装docker
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 # 安装fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
