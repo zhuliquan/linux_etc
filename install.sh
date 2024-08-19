@@ -2,7 +2,7 @@
 
 # 安装git, curl, wget, openssl vim neovim ack
 sudo apt-get update
-sudo apt-get install -y git curl wget openssl vim neovim ack
+sudo apt-get install -y git curl wget openssl vim neovim ack python3-pip
 
 # 安装fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
