@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
 # 添加阿里云源
+# 针对openeuler系统的
 sudo sed -e 's|http://repo.openeuler.org/|https://mirrors.aliyun.com/openeuler/|g' \
-         -e 's|https://mirrors.openeuler.org/|https://mirrors.aliyun.com/openeuler/|g' \
-         -i.bak \
-         /etc/yum.repos.d/openEuler.repo
+		 -e 's|https://mirrors.openeuler.org/|https://mirrors.aliyun.com/openeuler/|g' \
+		 -i.bak \
+		 /etc/yum.repos.d/openEuler.repo
+
 
 # 更新源
 sudo yum makecache
@@ -15,9 +17,7 @@ sudo yum install -y git curl wget openssl \
      vim python3-pip \
      ca-certificates gnupg \
      "dnf-command(config-manager)" \
-
-# 从二进制文件安装docker
-sudo bash ./install_docker.sh -s docker --mirror Aliyun
+     docker
 
 # 安装fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
