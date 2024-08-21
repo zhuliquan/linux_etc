@@ -444,7 +444,7 @@ do_install() {
 			esac
 		;;
 
-		centos|openeuler|rhel)
+		centos|rhel)
 			if [ -z "$dist_version" ] && [ -r /etc/os-release ]; then
 				dist_version="$(. /etc/os-release && echo "$VERSION_ID")"
 			fi
