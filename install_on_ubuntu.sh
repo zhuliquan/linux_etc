@@ -11,7 +11,8 @@ sudo apt-get update
 sudo apt-get install -y git curl wget openssl \
      ack vim neovim python3-pip \
      apt-transport-https \
-     ca-certificates gnupg lsb-release
+     ca-certificates gnupg lsb-release \
+	 lrzsz
 
 # 添加docker GPG 密钥
 curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
