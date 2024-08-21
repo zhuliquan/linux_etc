@@ -17,10 +17,7 @@ sudo yum install -y git curl wget openssl \
      "dnf-command(config-manager)" \
 
 # 从二进制文件安装docker
-# github
-sudo curl -fsSL https://github.com/tech-shrimp/docker_installer/releases/download/latest/linux.sh | bash -s docker --mirror Aliyun
-# gitee
-# sudo curl -fsSL https://gitee.com/tech-shrimp/docker_installer/releases/download/latest/linux.sh| bash -s docker --mirror Aliyun
+sudo bash ./install_docker.sh -s docker --mirror Aliyun
 
 # 安装fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
