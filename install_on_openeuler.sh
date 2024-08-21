@@ -15,15 +15,12 @@ sudo yum install -y git curl wget openssl \
      vim python3-pip \
      ca-certificates gnupg \
      "dnf-command(config-manager)" \
-     docker
 
 # 从二进制文件安装docker
-# arm64
-# wget https://download.docker.com/linux/static/stable/aarch64/docker-27.1.2.tgz
-# x86
-# wget https://download.docker.com/linux/static/stable/x86_64/docker-27.1.2.tgz
-# tar -zxf ./docker-27.1.2.tgz && sudo cp docker/* /usr/bin/
-# nohup dockerd &
+# github
+sudo curl -fsSL https://github.com/tech-shrimp/docker_installer/releases/download/latest/linux.sh | bash -s docker --mirror Aliyun
+# gitee
+# sudo curl -fsSL https://gitee.com/tech-shrimp/docker_installer/releases/download/latest/linux.sh| bash -s docker --mirror Aliyun
 
 # 安装fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
