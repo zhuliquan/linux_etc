@@ -11,10 +11,12 @@ sudo yum makecache
 sudo yum update
 
 # 安装git, curl, wget, openssl vim docker 等基础软件
-sudo yum install -y git curl wget openssl \
+sudo yum install -y \
+     git curl wget openssl lrzsz \
      vim python3-pip \
-     ca-certificates gnupg \
-     "dnf-command(config-manager)" \
+     ca-certificates gnupg "dnf-command(config-manager)" \
+     cmake gcc g++ automake make libssl-devel pkg-config \
+     zlib-devel
 
 # 从二进制文件安装docker
 sudo bash ./docker/install_docker.sh -s docker --mirror Aliyun
@@ -54,7 +56,6 @@ tar -xf node-v20.17.0-linux-x64.tar.xz
 mkdir -p $HOME/infra/
 mv node-v20.17.0-linux-x64 $HOME/infra/node
 cp ./node/.npmrc $HOME/.npmrc
-echo 'export PATH=$HOME/infra/node/bin:$PATH' >> $HOME/.bashrc
 
 # 安装go语言环境
 wget https://studygolang.com/dl/golang/go1.23.0.linux-amd64.tar.gz
@@ -62,12 +63,11 @@ tar -zxf go1.23.0.linux-amd64.tar.gz
 mkdir -p $HOME/infra
 mv go $HOME/infra/
 mkdir -p $HOME/workspace/go/{src,pkg,bin}
-echo 'export GOROOT=$HOME/infra/go' >> $HOME/.bashrc
 echo 'export GO111MODULE=on' >> $HOME/.bashrc
 echo 'export GOPROXY=https://goproxy.io,direct' >> $HOME/.bashrc
 echo 'export GOPRIVATE=git.mycompany.com,github.com/my/private' >> $HOME/.bashrc
-echo 'export GOPATh=$HOME/workspace/go' >> $HOME/.bashrc
-echo 'export PATH=$GOROOT/bin:$GOPATH/bin:$PATH' >> $HOME/.bashrc
+echo 'export GOROOT=$HOME/infra/go' >> $HOME/.bashrc
+echo 'export GOPATH=$HOME/workspace/go' >> $HOME/.bashrc
 
 # 安装rust语言环境
 echo 'export RUSTUP_DIST_SERVER="https://rsproxy.cn"' >> $HOME/.bashrc
@@ -76,6 +76,9 @@ source $HOME/.bashrc
 curl --proto '=https' --tlsv1.2 -sSf https://rsproxy.cn/rustup-init.sh | sh
 cp ./rust/config.toml $HOME/.cargo/config
 cp ./rust/config.toml $HOME/.cargo/config.toml
+
+# 配置路径
+echo 'export PATH=$HOME/infra/node/bin:$GOROOT/bin:$GOPATH/bin:$PATH' >> $HOME/.bashrc
 
 # 启用bashrc相关配置
 source $HOME/.bashrc

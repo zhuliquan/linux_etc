@@ -12,10 +12,12 @@ sudo yum makecache
 sudo yum update
 
 # 安装git, curl, wget, openssl vim docker 等基础软件
-sudo yum install -y git curl wget openssl \
+sudo yum install -y \
+     git curl wget openssl lrzsz \
      vim python3-pip \
-     ca-certificates gnupg \
-     "dnf-command(config-manager)" \
+     ca-certificates gnupg "dnf-command(config-manager)" \
+     cmake gcc g++ automake make libssl-devel pkg-config \
+     zlib-devel \
      docker
 
 # 启动docker
