@@ -96,6 +96,16 @@ Plug 'itchyny/vim-cursorword'
 " <leader>K 取消所有的单词高亮
 Plug 'lfv89/vim-interestingwords'
 
+" rust 开发工具
+" Rust语法高亮，格式化
+Plug 'rust-lang/rust.vim'
+
+" vim-lsp 代码补全, 错误检查
+Plug 'prabirshrestha/vim-lsp'
+
+" ale 一步语法检查和代码格式化
+Plug 'dense-analysis/ale'
+
 call plug#end()
 
 " ==============================================================================
@@ -157,6 +167,7 @@ set incsearch
 set laststatus=2
 " 允许插件
 filetype plugin on
+filetype indent on
 " 检测文件类型
 filetype on
 " backspace可以删除数据
@@ -187,6 +198,10 @@ let mapleader=","
 map s <nop>
 nmap <leader>R :source $MYVIMRC<CR>
 nmap <silent> <Esc> <Esc>:noh<CR>
+" 选择文本使用rustfmt 进行格式化
+vnoremap <leader>rsft :RustFmtRange<CR>
+" 普通模式执行rustfmt 对文件进行格式化
+nnoremap <leader>rsft :RustFmt<CR>
 
 " ==============================================================================
 " NERDTree 插件
@@ -259,6 +274,8 @@ noremap <leader>b :Buffers<CR>
 " ==============================================================================
 " 启用tabline
 let g:airline#extensions#tabline#enabled = 1
+" 在装填栏显示ale检查检查结果
+let g:airline#extensions#ale#enabled = 1
 " 显示buffer编号
 let g:airline#extensions#tabline#buffer_nr_show = 1
 " 直接定位到要用buffer
@@ -271,3 +288,28 @@ nmap <leader>6 :b6<CR>
 nmap <leader>7 :b7<CR>
 nmap <leader>8 :b8<CR>
 nmap <leader>9 :b9<CR>
+
+" ==============================================================================
+" rust.vim 插件
+" ==============================================================================
+" 自动保存rust文件
+let g:rustfmt_autosave = 1 
+" 格式化命令
+let g:rustfmt_command = "rustfmt" 
+
+" ==============================================================================
+" ale 插件
+" ==============================================================================
+" rust 代码检查
+let g:ale_linters = { "rust": [ "analyzer", "cargo", "clippy" ] }
+" rust bug修复工具
+let g:ale_fixers = { "rust": [ "cargo", "rustfmt" ] }
+" 使用clippy进行更加严格的代码检查
+let g:ale_rust_cargo_use_clippy = 1
+" ale 错误和告警显示
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+" ale开启修复列表
+let g:ale_open_list = 1
+let g:ale_set_quickfix = 1
+
