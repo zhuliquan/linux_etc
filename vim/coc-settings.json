@@ -1,0 +1,5 @@
+{
+  "rust-analyzer.updates.prompt": false,
+  "rust-analyzer.server.path": "$HOME/.cargo/bin/rust-analyzer"
+}
+
