@@ -77,5 +77,11 @@ curl --proto '=https' --tlsv1.2 -sSf https://rsproxy.cn/rustup-init.sh | sh
 cp ./rust/config.toml $HOME/.cargo/config
 cp ./rust/config.toml $HOME/.cargo/config.toml
 
+# 配置rust-analyzer lsp
+mkdir -p $HOME/infra/rust-analyzer
+# cat ./rust/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > $HOME/infra/rust-analyzer/rust-analyzer
+ curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > $HOME/infra/rust-analyzer/rust-analyzer
+chmod +x $HOME/infra/rust-analyzer/rust-analyzer
+
 # 启用bashrc相关配置
 source $HOME/.bashrc
