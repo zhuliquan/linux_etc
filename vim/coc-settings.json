@@ -1,5 +1,6 @@
 {
   "rust-analyzer.updates.prompt": false,
-  "rust-analyzer.server.path": "$HOME/infra/rust-analyzer/rust-analyzer"
+  "rust-analyzer.server.path": "$HOME/infra/rust-analyzer/rust-analyzer", # 选中特定rust-analyzer后端服务
+  "rust-analyzer.server.extraEnv": {}
 }
 
