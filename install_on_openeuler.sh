@@ -49,6 +49,7 @@ cp ./vim/.vimrc $HOME/.vimrc
 # 配置neovim config
 mkdir -p $HOME/.config/nvim/
 ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim
+cp ./vim/coc-settings.json $HOME/.config/nvim/coc-settings.json
 
 # 安装node语言环境
 wget https://npmmirror.com/mirrors/node/v20.17.0/node-v20.17.0-linux-x64.tar.xz
