@@ -39,6 +39,9 @@ Plug 'majutsushi/tagbar'
 " Go开发的专有插件
 Plug 'fatih/vim-go'
 
+" Rust开发的专有插件
+Plug 'rust-lang/rust.vim'
+
 " Coc代码补全
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -484,3 +487,9 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" ==============================================================================
+" 按键设置
+" ==============================================================================
+" 在保存的时候使用rust fmt
+let g:rustfmt_autosave = 1
