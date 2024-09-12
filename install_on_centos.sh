@@ -40,7 +40,9 @@ sudo pip3 install neovim
 
 # 安装vim-plug 插件
 mkdir -p $HOME/.vim/{autoload,colors,doc,plugged,syntax}
-cp ./plug.vim $HOME/.vim/autoload/plug.vim
+cp ./vim/plug.vim $HOME/.vim/autoload/plug.vim
+mkdir -p $HOME/.local/share/nvim/site/autoload
+cp ./vim/plug.vim $HOME/.local/share/nvim/site/autoload/plug.vim
 
 # 配置vimrc
 cp ./vim/.vimrc $HOME/.vimrc
