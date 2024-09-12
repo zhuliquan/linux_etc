@@ -2,7 +2,10 @@
 " 加载插件
 " ==============================================================================
 
-call plug#begin('~/.vim/plugged')
+" vim的配置
+" call plug#begin('~/.vim/plugged')
+" nvim的配置
+call plug#begin('~/.local/share/nvim/plugged')
 
 " one 配色方案
 Plug 'rakr/vim-one'
