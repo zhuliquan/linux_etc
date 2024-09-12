@@ -40,6 +40,8 @@ sudo pip3 install neovim
 # 安装vim-plug 插件
 mkdir -p $HOME/.vim/{autoload,colors,doc,plugged,syntax}
 cp ./vim/plug.vim $HOME/.vim/autoload/plug.vim
+mkdir -p ~/.local/share/nvim/site/autoload/
+cp ./vim/plug.vim $HOME/.local/share/nvim/site/autoload/plug.vim
 
 # 配置vimrc
 cp ./vim/.vimrc $HOME/.vimrc
@@ -47,8 +49,6 @@ cp ./vim/.vimrc $HOME/.vimrc
 # 配置neovim config
 mkdir -p $HOME/.config/nvim/
 ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim
-mkdir -p ~/.local/share/nvim/site/autoload/
-cp ./vim/plug.vim $HOME/.local/share/nvim/site/autoload/plug.vim
 
 # 安装node语言环境
 wget https://npmmirror.com/mirrors/node/v20.17.0/node-v20.17.0-linux-x64.tar.xz
