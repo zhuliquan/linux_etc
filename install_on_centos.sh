@@ -88,5 +88,8 @@ chmod +x $HOME/infra/rust-analyzer/rust-analyzer
 # 配置路径
 echo 'export PATH=$HOME/infra/node/bin:$GOROOT/bin:$GOPATH/bin:$PATH' >> $HOME/.bashrc
 
+# 设置别名
+alias nvi="nvim"
+
 # 启用bashrc相关配置
 source $HOME/.bashrc
