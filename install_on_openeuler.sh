@@ -18,7 +18,7 @@ sudo yum install -y \
      ca-certificates gnupg "dnf-command(config-manager)" \
      cmake gcc g++ automake make libssl-devel pkg-config \
      zlib-devel \
-     docker
+     docker tldr jq
 
 # 启动docker
 sudo systemctl enable docker
