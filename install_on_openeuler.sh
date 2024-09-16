@@ -86,5 +86,8 @@ mkdir -p $HOME/infra/rust-analyzer
  curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > $HOME/infra/rust-analyzer/rust-analyzer
 chmod +x $HOME/infra/rust-analyzer/rust-analyzer
 
+# 设置别名
+alias nvi="nvim"
+
 # 启用bashrc相关配置
 source $HOME/.bashrc
