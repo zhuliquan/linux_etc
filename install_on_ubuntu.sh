@@ -91,5 +91,8 @@ echo 'export PATH=$HOME/infra/node/bin:$GOROOT/bin:$GOPATH/bin:$PATH' >> $HOME/.
 # 设置别名
 alias nvi="nvim"
 
+# 设置默认编辑器为vim
+export EDITOR=vim
+
 # 启用bashrc相关配置
 source $HOME/.bashrc
