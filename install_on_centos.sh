@@ -16,7 +16,7 @@ sudo yum install -y \
      vim python3-pip \
      ca-certificates gnupg "dnf-command(config-manager)" \
      cmake gcc g++ automake make libssl-devel pkg-config \
-     zlib-devel tldr jq
+     zlib-devel tldr jq net-tools
 
 # 从二进制文件安装docker
 sudo bash ./docker/install_docker.sh -s docker --mirror Aliyun
