@@ -13,7 +13,7 @@ sudo apt-get install -y \
      ack vim neovim python3-pip \
      apt-transport-https ca-certificates gnupg lsb-release \
 	 cmake build-essential libssl-dev make automake pkg-config \
-	 zlib1g-dev tldr jq net-tools
+	 zlib1g-dev tldr jq net-tools unzip
 
 # 添加docker GPG 密钥
 curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg

@@ -17,7 +17,7 @@ sudo yum install -y \
      vim python3-pip \
      ca-certificates gnupg "dnf-command(config-manager)" \
      cmake gcc g++ automake make libssl-devel pkg-config \
-     zlib-devel docker tldr jqa net-tools
+     zlib-devel docker tldr jqa net-tools unzip
 
 # 启动docker
 sudo systemctl enable docker
