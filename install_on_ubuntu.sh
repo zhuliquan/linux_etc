@@ -85,6 +85,12 @@ mkdir -p $HOME/infra/rust-analyzer
  curl -L https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > $HOME/infra/rust-analyzer/rust-analyzer
 chmod +x $HOME/infra/rust-analyzer/rust-analyzer
 
+# 安装protoc
+wget https://github.com/protocolbuffers/protobuf/releases/download/v21.8/protoc-21.8-linux-x86_64.zip
+unzip protoc*.zip -d ./protoc
+sudo mv ./protoc/bin/protoc /usr/local/bin
+sudo mv ./protoc/include/* /usr/local/include
+
 # 配置路径
 echo 'export PATH=$HOME/infra/node/bin:$GOROOT/bin:$GOPATH/bin:$PATH' >> $HOME/.bashrc
 
