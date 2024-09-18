@@ -91,6 +91,16 @@ unzip protoc*.zip -d ./protoc
 sudo mv ./protoc/bin/protoc /usr/local/bin
 sudo mv ./protoc/include/* /usr/local/include
 
+# 安装python3
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt install python3.12-full -y
+
+# 配置python虚拟环境
+python3 -m venv $HOME/infra/venv
+source $HONE/infra/venv/bin/activate
+mkdir -p $HOME/.config/pip
+cp ./python/pip.conf $HOME/.cnofig/pip
+
 # 配置路径
 echo 'export PATH=$HOME/infra/node/bin:$GOROOT/bin:$GOPATH/bin:$PATH' >> $HOME/.bashrc
 
