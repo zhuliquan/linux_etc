@@ -487,6 +487,8 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+" 设置 hover 悬浮文档
+nnoremap <silent> <leader>h :call CocActionAsync('doHover')<CR>
 
 " ==============================================================================
 " 按键设置
