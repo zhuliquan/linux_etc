@@ -102,3 +102,21 @@ export EDITOR=vim
 
 # 启用bashrc相关配置
 source $HOME/.bashrc
+
+# 创建存放插件的目录
+mkdir -p $HOME/.local/share/nvim/plugged
+
+# PlugInstall插件
+nvim -c ':PlugInstall' -c ':q' -c ':q' -c ':q'
+
+# 安装vim-go依赖的文件
+nvim -c ':GoInstallBinaries' -c ':q'
+
+# 安装coc.nvim插件
+nvim -c ':CocInstall coc-calc coc-cmake coc-css coc-docker' \
+	 -c ':CocInstall coc-eslint coc-explorer coc-git coc-go' \
+	 -c ':CocInstall coc-graphql coc-html coc-java coc-jedi' \
+	 -c ':CocInstall coc-json coc-markdownlint coc-metals coc-powershell' \
+	 -c ':CocInstall coc-rust-analyzer coc-sh coc-spell-checker coc-sql coc-swagger' \
+	 -c ':CocInstall coc-toml coc-tsserver coc-xml coc-yaml'
+
