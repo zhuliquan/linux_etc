@@ -6,4 +6,5 @@
    - install on ubuntu: `./install_on_ubuntu.sh`.
    - install on centos: `./install_on_centos.sh`.
    - install on openeuler: `./install_on_openeuler.sh`.
+   - install on archlinux: `./install_on_archlinux.sh`.
 
