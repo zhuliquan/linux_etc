@@ -41,7 +41,7 @@ sudo cp ack /usr/bin/ack && sudo chmod 0755 /usr/bin/ack
 # 安装neovim
 wget https://github.com/neovim/neovim/releases/download/v0.10.1/nvim-linux64.tar.gz
 tar -zxf nvim-linux64.tar.gz && sudo cp nvim-linux64/bin/nvim /usr/bin/nvim
-sudo pip3 install neovim
+pip3 install neovim
 
 # 安装vim-plug 插件
 mkdir -p $HOME/.vim/{autoload,colors,doc,plugged,syntax}

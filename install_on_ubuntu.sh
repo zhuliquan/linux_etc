@@ -58,7 +58,7 @@ cp ./vim/plug.vim $HOME/.local/share/nvim/site/autoload/plug.vim
 cp ./vim/.vimrc $HOME/.vimrc
 
 # 配置neovim config
-sudo pip3 install neovim
+pip3 install neovim
 mkdir -p $HOME/.config/nvim/
 ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim
 cp ./vim/coc-settings.json $HOME/.config/nvim/coc-settings.json
