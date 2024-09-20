@@ -26,6 +26,7 @@ sudo systemctl enable docker
 sudo systemctl start docker
 
 # 配置python虚拟环境
+mkdir -p $HOME/infra/venv
 python3 -m venv $HOME/infra/venv
 source $HONE/infra/venv/bin/activate
 mkdir -p $HOME/.config/pip
