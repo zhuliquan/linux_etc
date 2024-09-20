@@ -102,14 +102,14 @@ unzip protoc*.zip -d ./protoc
 sudo mv ./protoc/bin/protoc /usr/local/bin
 sudo mv ./protoc/include/* /usr/local/include
 
-# 配置路径
-echo 'export PATH=$HOME/infra/node/bin:$GOROOT/bin:$GOPATH/bin:$PATH' >> $HOME/.bashrc
-
 # 设置别名
-alias nvi="nvim"
+echo 'alias nvi="nvim"' >> $HOME/.bashrc
 
 # 设置默认编辑器为vim
-export EDITOR=vim
+echo 'export EDITOR=vim' >> $HOME/.bashrc
+
+# 配置路径
+echo 'export PATH=$HOME/infra/node/bin:$GOROOT/bin:$GOPATH/bin:$PATH' >> $HOME/.bashrc
 
 # 启用bashrc相关配置
 source $HOME/.bashrc
@@ -125,9 +125,9 @@ nvim -c ':GoInstallBinaries' -c ':q'
 
 # 安装coc.nvim插件
 nvim -c ':CocInstall coc-calc coc-cmake coc-css coc-docker' \
-	 -c ':CocInstall coc-eslint coc-explorer coc-git coc-go' \
-	 -c ':CocInstall coc-graphql coc-html coc-java coc-jedi' \
-	 -c ':CocInstall coc-json coc-markdownlint coc-metals coc-powershell' \
-	 -c ':CocInstall coc-rust-analyzer coc-sh coc-spell-checker coc-sql coc-swagger' \
-	 -c ':CocInstall coc-toml coc-tsserver coc-xml coc-yaml'
+     -c ':CocInstall coc-eslint coc-explorer coc-git coc-go' \
+     -c ':CocInstall coc-graphql coc-html coc-java coc-jedi' \
+     -c ':CocInstall coc-json coc-markdownlint coc-metals coc-powershell' \
+     -c ':CocInstall coc-rust-analyzer coc-sh coc-spell-checker coc-sql coc-swagger' \
+     -c ':CocInstall coc-toml coc-tsserver coc-xml coc-yaml'
 
