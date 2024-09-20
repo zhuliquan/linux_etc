@@ -33,6 +33,16 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plu
 sudo systemctl enable docker
 sudo systemctl start docker
 
+# 安装python3
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt install python3.12-full -y
+
+# 配置python虚拟环境
+python3 -m venv $HOME/infra/venv
+source $HONE/infra/venv/bin/activate
+mkdir -p $HOME/.config/pip
+cp ./python/pip.conf $HOME/.cnofig/pip
+
 # 安装fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
 $HOME/.fzf/install
@@ -90,16 +100,6 @@ wget https://github.com/protocolbuffers/protobuf/releases/download/v21.8/protoc-
 unzip protoc*.zip -d ./protoc
 sudo mv ./protoc/bin/protoc /usr/local/bin
 sudo mv ./protoc/include/* /usr/local/include
-
-# 安装python3
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt install python3.12-full -y
-
-# 配置python虚拟环境
-python3 -m venv $HOME/infra/venv
-source $HONE/infra/venv/bin/activate
-mkdir -p $HOME/.config/pip
-cp ./python/pip.conf $HOME/.cnofig/pip
 
 # 配置路径
 echo 'export PATH=$HOME/infra/node/bin:$GOROOT/bin:$GOPATH/bin:$PATH' >> $HOME/.bashrc

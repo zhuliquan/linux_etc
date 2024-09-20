@@ -25,6 +25,12 @@ sudo bash ./docker/install_docker.sh -s docker --mirror Aliyun
 sudo systemctl enable docker
 sudo systemctl start docker
 
+# 配置python虚拟环境
+python3 -m venv $HOME/infra/venv
+source $HONE/infra/venv/bin/activate
+mkdir -p $HOME/.config/pip
+cp ./python/pip.conf $HOME/.cnofig/pip
+
 # 安装fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
 $HOME/.fzf/install
