@@ -13,7 +13,7 @@ sudo apt-get install -y \
      ack vim neovim python3-pip \
      apt-transport-https ca-certificates gnupg lsb-release \
 	 cmake build-essential libssl-dev make automake pkg-config \
-	 zlib1g-dev tldr jq net-tools unzip
+	 zlib1g-dev tldr jq net-tools unzip lua5.4
 
 # 添加docker GPG 密钥
 curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -129,5 +129,5 @@ nvim -c ':CocInstall coc-calc coc-cmake coc-css coc-docker' \
      -c ':CocInstall coc-graphql coc-html coc-java coc-jedi' \
      -c ':CocInstall coc-json coc-markdownlint coc-metals coc-powershell' \
      -c ':CocInstall coc-rust-analyzer coc-sh coc-spell-checker coc-sql coc-swagger' \
-     -c ':CocInstall coc-toml coc-tsserver coc-xml coc-yaml'
+     -c ':CocInstall coc-toml coc-tsserver coc-xml coc-yaml coc-lua'
 
