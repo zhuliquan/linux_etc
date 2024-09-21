@@ -85,7 +85,8 @@ sudo mv ./protoc/bin/protoc /usr/local/bin
 sudo mv ./protoc/include/* /usr/local/include
 
 # 设置别名
-echo 'alias nvi="nvim"' >> $HOME/.bashrc
+echo 'alias nvi=nvim' >> $HOME/.bashrc
+echo 'alias ls="ls -l"' >> $HOME/.bashrc
 
 # 设置默认编辑器为vim
 echo 'export EDITOR=vim' >> $HOME/.bashrc
