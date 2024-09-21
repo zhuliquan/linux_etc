@@ -14,7 +14,7 @@ sudo yum update
 # 安装git, curl, wget, openssl vim docker 等基础软件
 sudo yum install -y \
      git curl wget openssl lrzsz \
-     vim python3-pip \
+     vim python3-pip lua-devel \
      ca-certificates gnupg "dnf-command(config-manager)" \
      cmake gcc g++ automake make libssl-devel pkg-config \
      zlib-devel docker tldr jqa net-tools unzip
@@ -125,5 +125,5 @@ nvim -c ':CocInstall coc-calc coc-cmake coc-css coc-docker' \
      -c ':CocInstall coc-graphql coc-html coc-java coc-jedi' \
      -c ':CocInstall coc-json coc-markdownlint coc-metals coc-powershell' \
      -c ':CocInstall coc-rust-analyzer coc-sh coc-spell-checker coc-sql coc-swagger' \
-     -c ':CocInstall coc-toml coc-tsserver coc-xml coc-yaml'
+     -c ':CocInstall coc-toml coc-tsserver coc-xml coc-yaml coc-lua'
 
