@@ -110,6 +110,17 @@ echo 'export PATH=$HOME/infra/node/bin:$GOROOT/bin:$GOPATH/bin:$PATH' >> $HOME/.
 # 启用bashrc相关配置
 source $HOME/.bashrc
 
+# 安装tssh trzsz
+go install github.com/trzsz/trzsz-ssh/cmd/tssh@latest
+go install github.com/trzsz/trzsz-go/cmd/trz@latest
+go install github.com/trzsz/trzsz-go/cmd/tsz@latest
+go install github.com/trzsz/trzsz-go/cmd/trzsz@latest
+
+# 设置ssh和rz/sz的别名
+echo 'alias ssh=tssh' >> $HOME/.bashrc
+echo 'alias rz=trz' >> $HOME/.bashrc
+echo 'alias sz=tsz' >> $HOME/.bashrc
+
 # 创建存放插件的目录
 mkdir -p $HOME/.local/share/nvim/plugged
 
