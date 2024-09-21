@@ -10,7 +10,7 @@ sudo pacman -Syyu
 pacman -Sy curl git wget openssl \
     lrzsz ack vim neovim cmake \
     make automake tldr jq \
-    net-tools unzip gcc \
+    net-tools unzip gcc lua \
     ca-certificates gnupg lsb-release \
     python3 pkg-config zlib \
     docker docker-compose
@@ -112,5 +112,5 @@ nvim -c ':CocInstall coc-calc coc-cmake coc-css coc-docker' \
      -c ':CocInstall coc-graphql coc-html coc-java coc-jedi' \
      -c ':CocInstall coc-json coc-markdownlint coc-metals coc-powershell' \
      -c ':CocInstall coc-rust-analyzer coc-sh coc-spell-checker coc-sql coc-swagger' \
-     -c ':CocInstall coc-toml coc-tsserver coc-xml coc-yaml'
+     -c ':CocInstall coc-toml coc-tsserver coc-xml coc-yaml coc-lua'
 
