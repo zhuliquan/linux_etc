@@ -83,7 +83,6 @@ echo 'export RUSTUP_DIST_SERVER="https://rsproxy.cn"' >> $HOME/.bashrc
 echo 'export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"' >> $HOME/.bashrc
 source $HOME/.bashrc
 curl --proto '=https' --tlsv1.2 -sSf https://rsproxy.cn/rustup-init.sh | sh
-cp ./rust/config.toml $HOME/.cargo/config
 cp ./rust/config.toml $HOME/.cargo/config.toml
 
 # 配置rust-analyzer lsp
