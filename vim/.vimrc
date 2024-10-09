@@ -193,6 +193,12 @@ set wrap
 " 自动根据文件切换目录
 set autochdir
 
+" 设置可以折叠代码
+" zc 折叠
+" zx 打开
+set foldmethod=syntax
+set foldlevelstart=99
+
 " 退出插入模式自动保存
 au InsertLeave *.c,*.cc,*.cxx,*.cpp,*.cs,*.ts,*.js,*.css,*.html,*.go,*.rs,*.java,*.tsx,*.scala,*.vim,*.vimrc,*.sh,*.bash write
 
