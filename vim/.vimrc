@@ -121,6 +121,8 @@ call plug#end()
 " 语法高亮
 syntax on
 syntax enable
+" 设置鼠标为空
+set mouse=
 " 设置行号
 set number
 " 显示命令
