@@ -217,6 +217,13 @@ vnoremap <leader>rsft :RustFmtRange<CR>
 " 普通模式执行rustfmt 对文件进行格式化
 nnoremap <leader>rsft :RustFmt<CR>
 
+" 将选中内容复制到a寄存器中
+vnoremap y "ay
+nnoremap y "ay
+" 从a寄存器中粘贴东西
+vnoremap p "ap
+nnoremap p "ap
+
 " ==============================================================================
 " NERDTree 插件
 " ==============================================================================
